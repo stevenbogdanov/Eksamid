@@ -1,0 +1,34 @@
+class Calculator:
+    def __init__(self):
+        self.result = 0  # Initsialiseerib kalkulaatori tulemuse nulliga
+
+    def add(self, num):
+        self.result += num  # Liidab antud arvu tulemusega
+
+    def subtract(self, num):
+        self.result -= num  # Lahutab antud arvu tulemusest
+
+    def multiply(self, num):
+        self.result *= num  # Korrutab antud arvu tulemusega
+
+    def divide(self, num):
+        if num != 0:
+            self.result /= num  # Jagab tulemuse antud arvuga, välja arvatud nulliga jagamise puhul
+        else:
+            print("Sa ei saa nulliga jagada!")  # Väljastab veateate nulliga jagamise korral
+
+    def clear(self):
+        self.result = 0  # Nullib kalkulaatori tulemuse
+
+    def get_result(self):
+        return self.result  # Tagastab kalkulaatori tulemuse
+
+# Testimine
+calc = Calculator()
+calc.add(5)
+calc.subtract(2)
+calc.multiply(3)
+calc.divide(2)
+print("Result:", calc.get_result())  # Väljastab tulemuse
+
+#Sisestades koodi "Testimise" osase vajalikud numbrid saad kalkulaatorit kasutada kuidas ise soovid. Väljastab arvu.
